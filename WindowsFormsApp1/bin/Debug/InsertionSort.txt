@@ -1,0 +1,18 @@
+﻿void insertionSort(int arr[], int n)
+{
+	int aux, poz;
+
+	for (int i = 1; i < n; i++)
+	{
+		aux = arr[i];
+		poz = i;
+
+		while (poz > 0 && arr[poz - 1] > aux)
+		{
+			arr[poz] = arr[poz - 1];
+			poz--;
+		}
+
+		arr[poz] = aux;
+	}
+}
